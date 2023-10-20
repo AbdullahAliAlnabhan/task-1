@@ -1,19 +1,30 @@
-import React from 'react';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-function App() {
-  const handleClick = () => {
-    alert('me name is abduallah  id number : 136517');
+export default function App() {
+  const [displayText, setDisplayText] = useState('Abdaullah Ali Alnabhan 136517!');
+
+  const updateText = () => {
+    setDisplayText('Button Clicked!');
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>My React App</h1>
-        <button onClick={handleClick}>الاسود</button>
-      </header>
-    </div>
+    <View style={styles.container}>
+      <Text style={styles.text}>{displayText}</Text>
+      <Button title="Show information" onPress={updateText} />
+    </View>
   );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 20,
+    marginBottom: 20,
+  },
+});
