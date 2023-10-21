@@ -1,4 +1,4 @@
-// App.js
+ App.js
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
@@ -28,5 +28,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 }); 
+<ul style={
+  {
+    backgroundColor: 'black',
+    color: 'white'
+  }
+}></ul>
 
 // export default app;
